@@ -2,7 +2,7 @@ services:
   api:
     build: ./rag-eval-api
     ports:
-      - "8000:8000"
+      - "8011:8000"
     volumes:
       - ./rag-eval-api/data:/app/data
     env_file:
@@ -12,9 +12,10 @@ services:
   ui:
     build: ./rag-eval-ui
     ports:
-      - "3000:3000"
+      - "3010:3000"
     environment:
       - NEXT_PUBLIC_API_URL=http://api:8000
+      - API_URL=http://api:8000
     depends_on:
       - api
     restart: unless-stopped
