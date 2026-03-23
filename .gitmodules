@@ -1,0 +1,7 @@
+[submodule "rag-eval-api"]
+	path = rag-eval-api
+	url = https://github.com/luisforni/rag-eval-api
+
+[submodule "rag-eval-ui"]
+	path = rag-eval-ui
+	url = https://github.com/luisforni/rag-eval-ui
